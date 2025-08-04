@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Eloheh Health Solutions | Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Fonts: geometric sans (League Spartan) + serif for variety -->
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== Brand + base ===== */
+    :root{
+      --brand: #9ad6c6;         /* Eloheh mint */
+      --brand-accent: #6fb5a3;  /* darker mint for emphasis */
+      --ink: #223;              /* text */
+      --ink-muted: #556;
+      --surface: #ffffff;
+    }
+    *{ box-sizing: border-box; }
+    html,body{ margin:0; padding:0; }
+    body{
+      font-family: "League Spartan", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--brand);
+      line-height: 1.55;
+    }
+    .brand-bar{ height:6px; background: var(--brand-accent); }
+
+    header, footer{ background: var(--surface); padding: 16px; }
+    main{
+      max-width: 980px; margin: 20px auto; background: var(--surface);
+      padding: 24px 20px; border-radius: 12px;
+      box-shadow: 0 1px 0 rgba(0,0,0,.04);
+    }
+
+    h1{ margin: 0 0 4px; font-size: 2rem; letter-spacing:.02em; }
+    h2{ margin: 1.25rem 0 .25rem; font-size: 1.35rem; }
+    h3{ margin: 1rem 0 .25rem; font-size: 1.1rem; }
+
+    .tagline{ color: var(--brand-accent); font-style: italic; font-size: 1.05rem; }
+    .two-col{ display:grid; gap: 24px; grid-template-columns: 1fr 1fr; }
+    @media (max-width: 720px){ .two-col{ grid-template-columns: 1fr; } }
+
+    img.logo{ width: 96px; height:auto; vertical-align: middle; }
+    img.service{ max-width:100%; height:auto; border:2px solid #cfe8e1; border-radius:8px; }
+
+    .note{ color: var(--brand-accent); text-decoration: underline; } /* underline + color */
+    .small{ color: var(--ink-muted); font-size: .9rem; }
+    .badge{ display:inline-block; padding:.2rem .6rem; border:1px solid var(--brand-accent); border-radius:999px; font-size:.9rem; }
+
+    /* extra font variety (serif) + size requirement */
+    .lede{ font-family: Georgia, "Times New Roman", serif; font-size: 1.15rem; }
+  </style>
+</head>
+<body>
+  <div class="brand-bar"></div>
+  <header>
+    <img class="logo" src="logo-eloheh.png" alt="Eloheh logo">
+    <h1><b>Our Health Services</b></h1> <!-- bold -->
+    <p class="tagline">Peace, harmony, and abundance through community health.</p>
+  </header>
+
+  <main>
+    <p class="lede">
+      At <b>Eloheh</b>, we focus on prevention and access so you can live well.
+      Our services are delivered by licensed clinicians and supported by coordinated follow-up.
+      Ask about our <span class="note">care navigator</span> program. <!-- underline -->
+    </p>
+
+    <section>
+      <h2>Flu Shots <span class="badge">Seasonal</span></h2>
+      <p>
+        Fast, safe vaccinations for all ages. <i>Walk-ins welcome</i> on select weekends. <!-- italics -->
+      </p>
+
+      <h2>Physicals</h2>
+      <p>
+        Annual, school/sports, and employment physicals. Same-week availability and electronic forms.
+      </p>
+
+      <h2>Health Screening</h2>
+      <p>
+        Blood pressure, cholesterol, and glucose checks with on-the-spot guidance and referrals.
+      </p>
+
+      <!-- Example image; replace with a real services photo if you have one -->
+      <img class="service" src="logo-eloheh.png" alt="Eloheh brand mark">
+    </section>
+
+    <section class="two-col">
+      <div>
+        <h3>Benefits (unordered list)</h3>
+        <ul>
+          <li>Early detection & prevention</li>
+          <li>Convenient scheduling options</li>
+          <li>Community-focused, culturally mindful care</li>
+          <li>Transparent pricing</li>
+        </ul>
+      </div>
+      <div>
+        <h3>How it works (ordered list)</h3>
+        <ol>
+          <li>Choose a service</li>
+          <li>Book online or by phone</li>
+          <li>Visit our clinic</li>
+          <li>Receive a follow-up plan</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- External link: opens in a new tab and does NOT replace your site -->
+    <p>
+      Learn more about <a href="https://www.cdc.gov/flu/prevent/index.html" target="_blank" rel="noopener">flu prevention (CDC)</a>.
+    </p>
+
+    <!-- Downloadable file: created by code (no extra file needed) -->
+    <p>
+      Download our <a id="brochureLink" download="Eloheh-Services-Brochure.txt">Services Brochure</a>.
+    </p>
+
+    <!-- Contact-me email link -->
+    <p>
+      Questions? <a href="mailto:jacob44@purdue.edu?subject=Eloheh%20Services%20Inquiry">Contact Jasmine</a>.
+    </p>
+  </main>
+
+  <footer>
+    <p class="small">Last modified: <span id="lastmod"></span></p>
+  </footer>
+
+  <script>
+    // Fill "Last modified" by code (not manual)
+    document.getElementById('lastmod').textContent = document.lastModified;
+
+    // Create a downloadable brochure file on the fly (meets the "download" requirement)
+    const brochureText = [
+      "Eloheh Health Solutions — Services Brochure",
+      "------------------------------------------------",
+      "Flu Shots: Seasonal clinics for all ages.",
+      "Physicals: Annual, school/sports, and employment.",
+      "Health Screening: BP, cholesterol, glucose + guidance.",
+      "",
+      "Contact: jacob44@purdue.edu"
+    ].join("\n");
+    const blob = new Blob([brochureText], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    const link = document.getElementById("brochureLink");
+    link.href = url;
+  </script>
+</body>
+</html>

@@ -5,47 +5,90 @@
   <title>Eloheh Health Solutions — Services</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    /* Palette inspired by your logo */
     :root{
-      --brand:#97d8c8;   /* mint from logo */
-      --accent:#2b8c88;  /* deeper teal for contrast */
-      --ink:#0f172a;     /* dark text */
-      --muted:#475569;   /* secondary text */
-      --ring:#e2e8f0;    /* borders */
+      --brand:#97d8c8;
+      --accent:#2b8c88;
+      --ink:#0f172a;
+      --muted:#475569;
+      --ring:#e2e8f0;
       --bg:#ffffff;
+      --mint:#ecfffb;
     }
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
-      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;}
-    a{color:var(--accent)}
-    .wrap{max-width:1080px;margin:0 auto;padding:22px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:6px 0 14px}
-    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
-    .brand img{height:48px;width:auto;border-radius:8px}
-    .brand span{font-weight:700;font-size:1.1rem}
-    nav a{margin-left:16px;text-decoration:none;color:var(--muted)}
-    nav a:hover{color:var(--ink);text-decoration:underline}
+    html,body {
+      margin:0; padding:0; background:var(--bg); color:var(--ink);
+      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    }
+    a { color: var(--accent) }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 22px; }
 
-    .hero{border:1px solid var(--ring);background:linear-gradient(180deg,#fff, #ecfffb 60%);
-      border-radius:14px;padding:28px 22px}
-    .hero h1{margin:0 0 8px;font-size:clamp(1.6rem,3.5vw,2.2rem)}
-    .tag{display:inline-block;background:var(--brand);color:#063; padding:4px 10px;border-radius:999px;font-weight:600}
+    header {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 14px; padding: 6px 0 14px;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none; color: var(--ink);
+    }
+    .brand img {
+      height: 48px; width: auto; border-radius: 8px;
+    }
+    .brand span {
+      font-weight: 700; font-size: 1.4rem;
+      letter-spacing: 0.5px;
+    }
+    nav a {
+      margin-left: 16px; text-decoration: none; color: var(--muted);
+    }
+    nav a:hover {
+      color: var(--ink); text-decoration: underline;
+    }
 
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
-    .card{background:#f9fbfb;border:1px solid var(--ring);border-radius:12px;padding:16px}
-    .card h3{margin:0 0 6px;font-size:1.05rem}
-    .note{color:var(--muted);font-size:.95rem}
+    .hero {
+      border: 1px solid var(--ring);
+      background: linear-gradient(180deg, #fff, #f6fcfa 60%);
+      border-radius: 14px;
+      padding: 28px 22px;
+    }
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    }
+    .big { font-size: 1.15rem }
+    .small { font-size: .9rem }
+    .brand-text { color: var(--accent) }
+    .btn {
+      display: inline-block; padding: 8px 12px; border-radius: 10px;
+      background: var(--accent); color: #fff; text-decoration: none;
+    }
+    .btn:hover { opacity: .9 }
+    .dl { background: var(--brand); color: #064e3b }
 
-    /* Requirement helpers: second font family + extra sizes + colors */
-    .serif{font-family: Georgia, "Times New Roman", Times, serif;} /* 2nd font family */
-    .big{font-size:1.15rem}     /* extra size beyond headers */
-    .small{font-size:.9rem}     /* another font size */
-    .brand-text{color:var(--accent)} /* 2nd font color usage */
-    .mint{color:#0a6b5f}        /* subtle third shade from the logo linework */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+    }
+    .card {
+      background: var(--mint);
+      border: 1px solid var(--ring);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .card h3 {
+      margin: 0 0 6px; font-size: 1.05rem;
+    }
+    .note { color: var(--muted); font-size: .95rem }
 
-    footer{border-top:1px solid var(--ring);margin-top:26px;padding:16px 0;color:var(--muted);font-size:.95rem}
-    .btn{display:inline-block;padding:8px 12px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none}
-    .btn:hover{opacity:.9}
-    .dl{background:var(--brand);color:#064e3b}
+    .serif { font-family: Georgia, "Times New Roman", Times, serif; }
+    .mint { color: #0a6b5f }
+
+    footer {
+      border-top: 1px solid var(--ring);
+      margin-top: 26px;
+      padding: 16px 0;
+      color: var(--muted);
+      font-size: .95rem;
+    }
   </style>
 </head>
 <body>
@@ -63,26 +106,25 @@
     </header>
 
     <section class="hero" id="hero">
-      <span class="tag serif">Peace • Harmony • Abundance</span>
-      <h1><u>Preventive care, made simple</u></h1> <!-- underline requirement -->
+      <h1><u>Preventive care, made simple</u></h1>
       <p class="big">
-        Our mission is to bring <em>vaccinations</em>, <strong>physicals</strong>, and
-        <em>screenings</em> to the community with <span class="brand-text">clarity and care</span>.
+        Our mission is to bring <strong>vaccinations</strong>, <strong>physical examinations</strong>, and
+        <strong>diagnostic screenings</strong> to our community with clarity and care.
       </p>
-      <p class="small serif">“Eloheh” in Cherokee reflects balance—like the sun-and-moon symbol in our logo—guiding services that fit life’s rhythm.</p>
       <p>
-        External resource: <a href="https://www.cdc.gov/vaccines/index.html" target="_blank" rel="noopener noreferrer">CDC Vaccines</a> <!-- external link that doesn't replace the page -->
+        External resource: <a href="https://www.cdc.gov/vaccines/index.html" target="_blank" rel="noopener noreferrer">CDC Vaccines</a>
       </p>
-      <a class="btn dl" href="./assets/eloheh-service-catalog.pdf" download>Download Service Catalog (PDF)</a> <!-- downloadable file -->
+      <a class="btn dl" href="./assets/eloheh-service-catalog.pdf" download>Download Service Catalog (PDF)</a>
     </section>
-
     <section id="values">
       <h2>Our Values</h2>
+      <img src="./assets/logo-eloheh.png" alt="Eloheh Logo" style="max-height: 80px; margin: 10px 0;">
+      <p class="serif small">“Eloheh” in Cherokee reflects balance—like the sun-and-moon symbol in our logo—guiding services that fit life’s rhythm.</p>
       <ul class="serif">
-        <li><strong>Harmony</strong>: whole-person, culturally respectful care.</li>
-        <li><strong>Peace</strong>: safe, transparent experiences and plain-language instructions.</li>
-        <li><strong>Abundance</strong>: accessible options—mobile clinics, evening hours, and fair pricing.</li>
-        <li><strong>Integrity</strong>: evidence-based practice and responsible data stewardship.</li>
+        <li><strong>Harmony:</strong> We prioritize whole-person, culturally respectful care tailored to suit your individual needs.</li>
+        <li><strong>Peace:</strong> Our primary goal at EHS is to provide a safe environment and promote transparency between providers and patients.</li>
+        <li><strong>Abundance:</strong> Access and options for everyone, through our mobile clinics, extended hours, and transparent pricing.</li>
+        <li><strong>Integrity:</strong> We provide experienced practitioners who ensure honest and responsible care.</li>
       </ul>
     </section>
 
@@ -119,7 +161,6 @@
       </div>
 
       <h3 class="serif">How your visit works</h3>
-      <!-- ordered list requirement -->
       <ol class="mint">
         <li>Book online or by phone.</li>
         <li>Visit your nearest Eloheh site or a mobile clinic.</li>
@@ -127,12 +168,10 @@
       </ol>
       <p class="note">Need help choosing a service? <a href="#contact">Contact us</a> and we’ll guide you.</p>
     </section>
-
     <section id="contact">
       <h2>Contact</h2>
       <p>Questions, group clinics, or partnerships? We’d love to talk.</p>
-      <!-- “contact me” mail link requirement -->
-      <p><a class="btn" href="mailto:youremail@example.com">Email the Page Author</a></p>
+      <p><a class="btn" href="mailto:info@elohehsolutions.com">Email the Page Author</a></p>
       <p class="small note">This link opens your default mail app.</p>
     </section>
 
@@ -142,10 +181,12 @@
   </div>
 
   <script>
-    // Auto year + auto "Date last modified" requirement
+    // Auto-fill the year and last modified date
     document.getElementById('y').textContent = new Date().getFullYear();
-    document.getElementById('lm').textContent = "Date last modified: " + document.lastModified;
+
+    const modDate = new Date(document.lastModified);
+    const options = { year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' };
+    document.getElementById('lm').textContent = "Date last modified: " + modDate.toLocaleString('en-US', options);
   </script>
 </body>
 </html>
-

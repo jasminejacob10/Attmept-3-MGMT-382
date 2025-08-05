@@ -1,10 +1,212 @@
 <!doctype html>
-<html><head>
-<meta charset="utf-8">
-<title>It Works</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Our Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Optional: Google Fonts fallback if your course requires a specific font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      /* Adjust these to your brand colors if needed */
+      --brand:#3a4bd9;
+      --brand-2:#6b7cff;
+      --ink:#0f172a;
+      --muted:#475569;
+      --bg:#ffffff;
+      --card:#f8fafc;
+      --ring:#e2e8f0;
+      --accent:#22c55e;
+    }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif}
+    .wrap{max-width:1100px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+    .brand img{height:40px;width:auto}
+    .brand span{font-weight:700;font-size:1.1rem}
+    nav a{margin-left:16px;text-decoration:none;color:var(--muted)}
+    nav a:hover{color:var(--ink)}
+    .hero{border:1px solid var(--ring);background:linear-gradient(180deg,#fff, #f6f8ff 55%);border-radius:16px;padding:48px 28px;margin:12px 0}
+    .hero h1{margin:0 0 8px;font-size:clamp(1.6rem,3vw,2.2rem)}
+    .hero p{margin:0 0 20px;color:var(--muted)}
+    .cta{display:inline-block;background:var(--brand);color:#fff;border-radius:10px;padding:10px 16px;text-decoration:none;font-weight:600}
+    .cta:hover{background:var(--brand-2)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:20px 0 8px}
+    .card{background:var(--card);border:1px solid var(--ring);border-radius:14px;padding:18px}
+    .card h3{margin:0 0 6px;font-size:1.05rem}
+    .card p{margin:0;color:var(--muted)}
+    .list{margin:10px 0 0;padding-left:18px;color:var(--muted)}
+    .price{display:flex;gap:16px;flex-wrap:wrap;margin-top:6px}
+    .badge{display:inline-block;background:#ecfeff;border:1px solid #cffafe;border-radius:999px;padding:4px 10px;font-size:.85rem}
+    .table{width:100%;border-collapse:collapse;margin-top:6px}
+    .table th,.table td{border:1px solid var(--ring);padding:10px;text-align:left}
+    .table th{background:#f1f5f9}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    footer{border-top:1px solid var(--ring);margin-top:28px;padding:18px 0;color:var(--muted);font-size:.95rem}
+    .note{font-size:.9rem;color:var(--muted)}
+  </style>
 </head>
-<body style="font:16px/1.5 system-ui; padding:24px;">
-  <h1>GitHub Pages is working ✅</h1>
-  <p>If you can see this, Pages is set up. Next we’ll replace this with your Services page.</p>
-</body></html>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="./">
+        <!-- Put your logo file in /assets/logo.png (or update the path/name) -->
+        <img src="./assets/logo.png" alt="Company logo" onerror="this.style.display='none'">
+        <span>Team 382 — Services</span>
+      </a>
+      <nav>
+        <a href="./">Home</a>
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Services that help your business run smoother</h1>
+      <p>We implement MIS-aligned solutions—CRM, SCM, and ERP integrations—to streamline operations, improve decision-making, and raise customer satisfaction.</p>
+      <a class="cta" href="#contact">Request a Consultation</a>
+    </section>
+
+    <section id="services">
+      <h2>What we do</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Systems Assessment & Roadmapping</h3>
+          <p>Current-state audit, data flows, and gap analysis mapped to business goals and KPIs.</p>
+          <ul class="list">
+            <li>Process mapping & swimlanes</li>
+            <li>Data model & integration points</li>
+            <li>Risk & controls (SOX-lite)</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>CRM Implementation</h3>
+          <p>Configure pipelines, automate follow-ups, and unify customer data for sales and service.</p>
+          <ul class="list">
+            <li>Lead-to-cash workflow</li>
+            <li>Dashboards & pipeline velocity</li>
+            <li>Email/SMS automation</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Supply Chain (SCM)</h3>
+          <p>Inventory visibility, vendor portals, and demand planning to reduce stockouts & carrying costs.</p>
+          <ul class="list">
+            <li>Reorder points & safety stock</li>
+            <li>Supplier scorecards</li>
+            <li>EDI/API integrations</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>ERP Integrations</h3>
+          <p>Modular ERP rollouts with clean master data, role security, and training.</p>
+          <ul class="list">
+            <li>Chart of accounts alignment</li>
+            <li>Procure-to-pay & order-to-cash</li>
+            <li>Reporting & audit trails</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Collaboration & Knowledge</h3>
+          <p>Intranet, file governance, and team hubs to reduce email overload and lost docs.</p>
+          <ul class="list">
+            <li>Versioning & permissions</li>
+            <li>Meeting notes → tasks</li>
+            <li>Searchable SOP library</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Analytics & Dashboards</h3>
+          <p>Operational dashboards tied to outcomes (cycle time, fill rate, CSAT, margin).</p>
+          <ul class="list">
+            <li>Data quality checks</li>
+            <li>Self-serve metrics</li>
+            <li>Forecast & alerts</li>
+          </ul>
+        </article>
+      </div>
+      <p class="note">* All implementations include testing, training, and simple documentation.</p>
+    </section>
+
+    <section id="pricing">
+      <h2>Pricing</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Starter</h3>
+          <p>Best for small pilots and proofs-of-concept.</p>
+          <div class="price">
+            <span class="badge">$0–$2,500 (class demo)</span>
+            <span class="badge">2–3 weeks</span>
+          </div>
+          <ul class="list">
+            <li>1 process automated</li>
+            <li>Basic dashboard</li>
+            <li>Email support</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Growth</h3>
+          <p>For mid-sized teams moving to integrated workflows.</p>
+          <div class="price">
+            <span class="badge">$5,000–$10,000*</span>
+            <span class="badge">4–8 weeks</span>
+          </div>
+          <ul class="list">
+            <li>2–3 systems integrated</li>
+            <li>Role-based dashboards</li>
+            <li>Training & playbooks</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Enterprise</h3>
+          <p>Custom engagements aligned to KPIs and controls.</p>
+          <div class="price">
+            <span class="badge">Custom</span>
+            <span class="badge">8+ weeks</span>
+          </div>
+          <ul class="list">
+            <li>Modular ERP/SCM/CRM</li>
+            <li>Change management</li>
+            <li>Data governance</li>
+          </ul>
+        </div>
+      </div>
+      <p class="note">* For coursework only; replace with your class’s required pricing language.</p>
+
+      <h3>Feature comparison</h3>
+      <table class="table" aria-label="Plan comparison">
+        <thead>
+          <tr><th>Feature</th><th>Starter</th><th>Growth</th><th>Enterprise</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Process automation</td><td>✓ basic</td><td>✓✓</td><td>✓✓✓</td></tr>
+          <tr><td>Integrations</td><td>—</td><td>2–3</td><td>Custom</td></tr>
+          <tr><td>Dashboards</td><td>Basic</td><td>Role-based</td><td>Executive + Ops</td></tr>
+          <tr><td>Support</td><td>Email</td><td>Email + sessions</td><td>Dedicated</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Have questions or want a demo? Reach out below.</p>
+      <div class="cta-row">
+        <a class="cta" href="mailto:youremail@example.com">Email Us</a>
+        <a class="cta" href="#hero" onclick="alert('Thanks! For the class demo, replace this with a real form or GitHub Issues link.');return false;">Request Demo</a>
+      </div>
+      <p class="note">For the class, you can replace the buttons with a simple form or a link to a GitHub Issue template.</p>
+    </section>
+
+    <footer>
+      © <span id="y"></span> Team 382. For educational use.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

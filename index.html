@@ -1,192 +1,81 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8" />
-  <title>Eloheh Health Solutions — Services</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    :root{
-      --brand:#97d8c8;
-      --accent:#2b8c88;
-      --ink:#0f172a;
-      --muted:#475569;
-      --ring:#e2e8f0;
-      --bg:#ffffff;
-      --mint:#ecfffb;
-    }
-    html,body {
-      margin:0; padding:0; background:var(--bg); color:var(--ink);
-      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-    }
-    a { color: var(--accent) }
-    .wrap { max-width: 1080px; margin: 0 auto; padding: 22px; }
-
-    header {
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 14px; padding: 6px 0 14px;
-    }
-    .brand {
-      display: flex; align-items: center; gap: 10px;
-      text-decoration: none; color: var(--ink);
-    }
-    .brand img {
-      height: 48px; width: auto; border-radius: 8px;
-    }
-    .brand span {
-      font-weight: 700; font-size: 1.4rem;
-      letter-spacing: 0.5px;
-    }
-    nav a {
-      margin-left: 16px; text-decoration: none; color: var(--muted);
-    }
-    nav a:hover {
-      color: var(--ink); text-decoration: underline;
-    }
-
-    .hero {
-      border: 1px solid var(--ring);
-      background: linear-gradient(180deg, #fff, #f6fcfa 60%);
-      border-radius: 14px;
-      padding: 28px 22px;
-    }
-    .hero h1 {
-      margin: 0 0 8px;
-      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
-    }
-    .big { font-size: 1.15rem }
-    .small { font-size: .9rem }
-    .brand-text { color: var(--accent) }
-    .btn {
-      display: inline-block; padding: 8px 12px; border-radius: 10px;
-      background: var(--accent); color: #fff; text-decoration: none;
-    }
-    .btn:hover { opacity: .9 }
-    .dl { background: var(--brand); color: #064e3b }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 14px;
-    }
-    .card {
-      background: var(--mint);
-      border: 1px solid var(--ring);
-      border-radius: 12px;
-      padding: 16px;
-    }
-    .card h3 {
-      margin: 0 0 6px; font-size: 1.05rem;
-    }
-    .note { color: var(--muted); font-size: .95rem }
-
-    .serif { font-family: Georgia, "Times New Roman", Times, serif; }
-    .mint { color: #0a6b5f }
-
-    footer {
-      border-top: 1px solid var(--ring);
-      margin-top: 26px;
-      padding: 16px 0;
-      color: var(--muted);
-      font-size: .95rem;
-    }
-  </style>
+  <title>Eloheh Health Solutions - Services</title>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <a class="brand" href="./">
-        <img src="./logo-eloheh.png" alt="Eloheh Health Solutions logo" onerror="this.style.display='none'">
-        <span>Eloheh Health Solutions</span>
-      </a>
-      <nav>
-        <a href="#services">Services</a>
-        <a href="#values">Values</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
 
-    <section class="hero" id="hero">
-      <h1><u>Preventive care, made simple</u></h1>
-      <p class="big">
-        Our mission is to bring <strong>vaccinations</strong>, <strong>physical examinations</strong>, and
-        <strong>diagnostic screenings</strong> to our community with clarity and care.
-      </p>
-      <p>
-        External resource: <a href="https://www.cdc.gov/vaccines/index.html" target="_blank" rel="noopener noreferrer">CDC Vaccines</a>
-      </p>
-      <a class="btn dl" href="./assets/eloheh-service-catalog.pdf" download>Download Service Catalog (PDF)</a>
-    </section>
-    <section id="values">
-      <h2>Our Values</h2>
-      <img src="./logo-eloheh.png" alt="Eloheh Logo" style="max-height: 80px; margin: 10px 0;">
-      <p class="serif small">“Eloheh” in Cherokee reflects balance—like the sun-and-moon symbol in our logo—guiding services that fit life’s rhythm.</p>
-      <ul class="serif">
-        <li><strong>Harmony:</strong> We prioritize whole-person, culturally respectful care tailored to suit your individual needs.</li>
-        <li><strong>Peace:</strong> Our primary goal at EHS is to provide a safe environment and promote transparency between providers and patients.</li>
-        <li><strong>Abundance:</strong> Access and options for everyone, through our mobile clinics, extended hours, and transparent pricing.</li>
-        <li><strong>Integrity:</strong> We provide experienced practitioners who ensure honest and responsible care.</li>
-      </ul>
-    </section>
+<!-- Logo and Title -->
+<img src="logo-eloheh.png" width="80" height="80" alt="Eloheh Logo" />
+<h1 align="center"><font face="Georgia">Eloheh Health Solutions</font></h1>
+<h2 align="center"><i>Preventive care, made simple</i></h2>
 
-    <section id="services">
-      <h2>Services</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Vaccination Appointments</h3>
-          <p>Routine and travel immunizations with reminders and after-care notes.</p>
-          <ul>
-            <li>Flu, COVID-19, Tdap, MMR, HPV, travel vaccines</li>
-            <li>Digital records and school/work documentation</li>
-            <li>On-site or mobile pop-up clinics</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>Annual Physicals</h3>
-          <p>Head-to-toe exams focusing on prevention, lifestyle goals, and care plans.</p>
-          <ul>
-            <li>Vitals, BMI, vision/hearing checks</li>
-            <li>Medication review and counseling</li>
-            <li>Personalized wellness goals</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>Health Screenings & Diagnostics</h3>
-          <p>Fast, reliable tests with clear follow-up steps.</p>
-          <ul>
-            <li>Blood pressure, A1C, cholesterol, rapid strep/flu</li>
-            <li>Cancer screenings coordination</li>
-            <li>Referrals and next-step guidance</li>
-          </ul>
-        </article>
-      </div>
+<!-- Mission Statement -->
+<p align="center">
+  <b>Our mission:</b>
+  To bring <b>vaccinations</b>, <b>physical examinations</b>, and
+  <b>diagnostic screenings</b> to our community with clarity and care.
+</p>
 
-      <h3 class="serif">How your visit works</h3>
-      <ol class="mint">
-        <li>Book online or by phone.</li>
-        <li>Visit your nearest Eloheh site or a mobile clinic.</li>
-        <li>Get results and a simple follow-up plan.</li>
-      </ol>
-      <p class="note">Need help choosing a service? <a href="#contact">Contact us</a> and we’ll guide you.</p>
-    </section>
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Questions, group clinics, or partnerships? We’d love to talk.</p>
-      <p><a class="btn" href="mailto:info@elohehsolutions.com">Email the Page Author</a></p>
-      <p class="small note">This link opens your default mail app.</p>
-    </section>
+<!-- External Resource -->
+<p align="center">
+  <a href="https://www.cdc.gov/vaccines/index.html" target="_blank">CDC Vaccines Page</a>
+</p>
 
-    <footer>
-      © <span id="y"></span> Eloheh Health Solutions • <span id="lm"></span>
-    </footer>
-  </div>
+<!-- Services Section -->
+<h2><u>Our Services</u></h2>
 
-  <script>
-    // Auto-fill the year and last modified date
-    document.getElementById('y').textContent = new Date().getFullYear();
+<!-- Vaccination Appointments -->
+<font face="Georgia" size="4"><b><u>Vaccination Appointments</u></b></font><br/>
+<ul>
+  <li>Flu, COVID-19, Tdap, MMR, HPV, and travel vaccines</li>
+  <li>Digital records for school/work</li>
+  <li>On-site or mobile clinics</li>
+</ul>
 
-    const modDate = new Date(document.lastModified);
-    const options = { year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' };
-    document.getElementById('lm').textContent = "Date last modified: " + modDate.toLocaleString('en-US', options);
-  </script>
+<!-- Annual Physicals -->
+<font face="Georgia" size="4"><b><u>Annual Physicals</u></b></font><br/>
+<ul>
+  <li>Vitals, BMI, vision/hearing checks</li>
+  <li>Medication review and counseling</li>
+  <li>Wellness goals planning</li>
+</ul>
+
+<!-- Screenings & Diagnostics -->
+<font face="Georgia" size="4"><b><u>Health Screenings & Diagnostics</u></b></font><br/>
+<ul>
+  <li>Blood pressure, A1C, cholesterol</li>
+  <li>Rapid tests for strep and flu</li>
+  <li>Cancer screenings and referrals</li>
+</ul>
+
+<!-- Visit Instructions -->
+<h3><b>How Your Visit Works</b></h3>
+<ol>
+  <li>Book online or by phone.</li>
+  <li>Visit your nearest Eloheh site or mobile clinic.</li>
+  <li>Receive results and a follow-up plan.</li>
+</ol>
+
+<!-- Values -->
+<h2><u>Our Values</u></h2>
+<ul>
+  <li><b>Harmony:</b> Culturally respectful, whole-person care</li>
+  <li><b>Peace:</b> Safe, transparent environment</li>
+  <li><b>Abundance:</b> Access through mobile clinics and fair pricing</li>
+  <li><b>Integrity:</b> Honest, experienced practitioners</li>
+</ul>
+
+<!-- Contact Info -->
+<h2>Contact Us</h2>
+<p>Questions or scheduling help? We’d love to hear from you.</p>
+<p>
+  <a href="mailto:info@elohehsolutions.com">Email the Page Author</a>
+</p>
+
+<!-- Footer -->
+<font color="gray">Page Last Modified: <script>document.write(document.lastModified)</script></font>
+
 </body>
 </html>
+
